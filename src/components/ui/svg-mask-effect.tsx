@@ -7,7 +7,7 @@ export const MaskContainer = ({
   children,
   revealText,
   size = 10,
-  revealSize = 700,
+  revealSize = 750,
   className,
 }: {
   children?: string | React.ReactNode;
@@ -48,6 +48,13 @@ export const MaskContainer = ({
         backgroundColor: { duration: 0.3 },
       }}
     >
+    <div className="absolute inset-0 -z-10">
+    <img
+      src="./images/heroSection/hero1.jpg"
+      className="h-full w-full object-cover"
+      alt=""
+    />
+  </div>
       <motion.div
         className="absolute flex h-full w-full items-center justify-center bg-black text-6xl [mask-image:url(/mask.svg)] [mask-repeat:no-repeat] [mask-size:40px] dark:bg-white"
         animate={{

@@ -75,7 +75,7 @@ export const products = [
       "./images/heroSection/hero12.jpg",
   },
   {
-    title: "MEDIA TRANSFORMATION",
+    title: "Worldwide Recognition",
     link: "https://sttf.sa/news",
     thumbnail:
       "./images/heroSection/hero13.jpg",
@@ -87,7 +87,7 @@ export const products = [
       "./images/heroSection/hero14.jpg",
   },
   {
-    title: "STRIVING FOR EXCELLENCE",
+    title: "International Partnerships",
     link: "https://sttf.sa/news",
     thumbnail:
       "./images/heroSection/hero15.jpg",
