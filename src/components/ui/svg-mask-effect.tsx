@@ -49,14 +49,15 @@ export const MaskContainer = ({
       }}
     >
     <div className="absolute inset-0 -z-10">
+      
     <img
-      src="./images/heroSection/hero1.jpg"
-      className="h-full w-full object-cover"
-      alt=""
+      src="./images/maskSection/maskSection.jpg"
+      className="h-full w-full object-cover opacity-100"
     />
+
   </div>
       <motion.div
-        className="absolute flex h-full w-full items-center justify-center bg-black text-6xl [mask-image:url(/mask.svg)] [mask-repeat:no-repeat] [mask-size:40px] dark:bg-white"
+        className="absolute flex h-full w-full items-center justify-center bg-white text-6xl [mask-image:url(/mask.svg)] [mask-repeat:no-repeat] [mask-size:40px] dark:bg-white"
         animate={{
           maskPosition: `${mousePosition.x - maskSize / 2}px ${
             mousePosition.y - maskSize / 2
@@ -68,7 +69,7 @@ export const MaskContainer = ({
           maskPosition: { duration: 0.15, ease: "linear" },
         }}
       >
-        <div className="absolute inset-0 z-0 h-full w-full bg-black opacity-50 dark:bg-white" />
+        <div className="absolute inset-0 z-0 h-full w-full bg-white opacity-50 dark:bg-black" />
         <div
           onMouseEnter={() => {
             setIsHovered(true);
@@ -76,13 +77,13 @@ export const MaskContainer = ({
           onMouseLeave={() => {
             setIsHovered(false);
           }}
-          className="relative z-20 mx-auto max-w-4xl text-center text-4xl font-bold"
+          className="relative z-20 mx-auto max-w-4xl text-center text-black text-4xl font-bold"
         >
           {children}
         </div>
       </motion.div>
 
-      <div className="flex h-full w-full items-center justify-center">
+      <div className="flex h-full text-black w-full items-center justify-center">
         {revealText}
       </div>
     </motion.div>
