@@ -106,7 +106,7 @@ export const Header = () => {
         Our kingdom will be a global hub for sports excellence, empowering our youth and inspiring the world through the transformative power of forward thinking.
       </h1>
       <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
-        - Prince Mohamed Al Saud
+        - Prince Mohammed bin Abdulrahman bin Nasser Al Saud
       </p>
     </div>
   );

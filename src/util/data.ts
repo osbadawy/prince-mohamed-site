@@ -19,7 +19,7 @@ export const products = [
   },
  
   {
-    title: "PRINCE MOHAMED AL SAUD",
+    title: "Prince Mohammed bin Abdulrahman bin Nasser Al Saud",
     link: "https://sttf.sa/news",
     thumbnail:
       "./images/heroSection/hero4.jpg",
@@ -65,7 +65,7 @@ export const products = [
     title: "PARTNERSHIPS AND COLLABORATIONS",
     link: "https://sttf.sa/news",
     thumbnail:
-      "./images/heroSection/hero11.jpg",
+      "./images/heroSection/hero11.png",
   },
  
   {
