@@ -16,15 +16,15 @@ export function Nav() {
   const navItems = [
     {
       name: "Prince Mohamed",
-      link: "#Mohamed",
+      link: "/Mohamed",
     },
     {
       name: "Initiatives",
-      link: "#initiatives",
+      link: "/Initiatives",
     },
     {
       name: "Media",
-      link: "#media",
+      link: "/media",
     },
   ];
 

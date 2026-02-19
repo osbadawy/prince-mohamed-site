@@ -93,5 +93,3 @@ export const products = [
       "./images/heroSection/hero15.jpg",
   },
 ];
-
-
