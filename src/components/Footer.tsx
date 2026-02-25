@@ -6,6 +6,7 @@ import {
   IconHome,
   IconNews,
   IconBulb,
+  IconBrandX,
 } from "@tabler/icons-react";
 
 export default function Footer() {
@@ -65,6 +66,13 @@ export default function Footer() {
               className="text-neutral-600 hover:text-black dark:text-neutral-400 dark:hover:text-white"
             >
               <IconBrandInstagram size={22} />
+            </a>
+            <a
+              href="https://x.com/mohammedalsaud?s=11"
+              target="_blank"
+              className="text-neutral-600 hover:text-black dark:text-neutral-400 dark:hover:text-white"
+            >
+              <IconBrandX size={22} />
             </a>
           </div>
         </div>
