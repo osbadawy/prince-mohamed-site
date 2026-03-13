@@ -9,6 +9,7 @@ import {
 } from "motion/react";
 
 import React, { useRef, useState } from "react";
+import { useLocale } from "next-intl";
 
 
 interface NavbarProps {
@@ -231,9 +232,11 @@ export const MobileNavToggle = ({
 };
 
 export const NavbarLogo = () => {
+  const locale = useLocale();
+  
   return (
     <a
-      href="/"
+      href={`/${locale}`}
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black"
     >
       <img
