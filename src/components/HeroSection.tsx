@@ -2,8 +2,11 @@
 
 import { motion } from "motion/react";
 import { AuroraBackground } from "./ui/aurora-background";
+import {useTranslations} from 'next-intl';
 
 export default function HeroSection() {
+  const t = useTranslations('Home')
+
   return (
     <AuroraBackground className="relative overflow-hidden min-h-screen">
       {/* Image: centered under 1100px, right-aligned above 1100px */}
@@ -27,11 +30,11 @@ export default function HeroSection() {
 
       >
         <div className="text-3xl md:text-4xl xl:text-6xl font-bold dark:text-white">
-          Prince Mohammed Bin Abdulrahman Bin Nasser AlSaud
+          {t('title')}
         </div>
 
         <div className="font-extralight text-base md:text-4xl dark:text-neutral-200 py-4">
-          Kingdom of Saudi Arabia
+          {t('description')}
         </div>
       </motion.div>
     </AuroraBackground>

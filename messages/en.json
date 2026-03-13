@@ -1,0 +1,104 @@
+{
+  "Home": {
+    "title": "Prince Mohammed Bin Abdulrahman Bin Nasser AlSaud",
+    "description": "Kingdom of Saudi Arabia",
+    "sectionStatement": "Our kingdom will be a global hub for sports excellence, empowering our youth and inspiring the world through the transformative power of forward thinking.",
+    "sectionName": "Prince Mohammed bin Abdulrahman bin Nasser Al Saud Al Saud"
+  },
+  "products": {
+    "hero1": "A BRIGHT FUTURE",
+    "hero2": "INTERNATIONAL COLLABORATIONS",
+    "hero3": "LEADERSHIP IN SPORTS",
+    "hero4": "Prince Mohammed bin Abdulrahman bin Nasser Al Saud",
+    "hero5": "OUR TRANSFORMATIVE POWER",
+    "hero6": "THE TEAM",
+    "hero7": "TECHNOLOGY AND INNOVATION",
+    "hero8": "A WINNING MINDSET",
+    "hero9": "YOUTH EMPOWERMENT",
+    "hero10": "INSPIRING THE WORLD",
+    "hero11": "PARTNERSHIPS AND COLLABORATIONS",
+    "hero12": "A SUPPORTIVE COMMUNITY",
+    "hero13": "Worldwide Recognition",
+    "hero14": "NURTURING TALENT",
+    "hero15": "International Partnerships"
+  },
+    "Credentials": {
+    "sttf-president": {
+      "title": "President of",
+      "description": "The Saudi Table Tennis Federation",
+      "ctaText": "Read More",
+      "content": "Prince Mohammed Bin Abdulrahman Bin Nasser Al Saud is the President of the Saudi Table Tennis Federation, leading a ground-up transformation of the sport through innovation, world-class coaching, and high-performance development programs that are raising athlete standards and global competitiveness.<br></br>"
+    },
+    "wattf-president": {
+      "title": "President of",
+      "description": "The West Asian Table Tennis Federation",
+      "ctaText": "Read More",
+      "content": "Prince Mohammed Bin Abdulrahman Bin Nasser Al Saud also leads the West Asian Table Tennis Federation, advancing regional collaboration and modern development programs while strengthening competitive pathways and raising performance standards across West Asia.<br></br>"
+    },
+    "ittf-advisory": {
+      "title": "President of",
+      "description": "The ITTF Advisory Council",
+      "ctaText": "Read More",
+      "content": "Prince Mohammed Bin Abdulrahman Bin Nasser Al Saud serves as President of the International Advisory Council, guiding strategic direction and cross-border cooperation initiatives that support modernization, governance excellence, and long-term growth of table tennis at the international level.<br></br>"
+    },
+    "attu-member": {
+      "title": "Member of",
+      "description": "The ATTU Council",
+      "ctaText": "Read More",
+      "content": "Prince Mohammed Bin Abdulrahman Bin Nasser Al Saud serves as a Council Member of ATTU, contributing to regional strategy, governance, and development initiatives that strengthen competition structures and advance table tennis across Asia.<br></br>"
+    }
+  },
+    "MaskSection": {
+    "revealText": "The Transformation <br></br> of<br></br> The Saudi Table Tennis Federation",
+    "body": "<highlight>The Saudi Table Tennis Federation</highlight> grew through a comprehensive gap assessment, launching a federation-wide strategy with <highlight>16+ initiatives</highlight> across six verticals, hiring 20 staff to serve <highlight>190+ clubs and 4,000+ players.</highlight>"
+  },
+    "Bento": {
+    "item1": {
+      "title": "The Future Of Table Tennis",
+      "description": "Prince Mohammed bin Abdulrahman bin Nasser Al Saud creates a legacy of excellence in Saudi table tennis.",
+      "alt": "Future of table tennis"
+    },
+    "item2": {
+      "title": "Partnerships For Progress",
+      "description": "Prince Mohammed bin Abdulrahman bin Nasser Al Saud forges strong alliances to drive growth and innovation.",
+      "alt": "Partnerships"
+    },
+    "item3": {
+      "title": "The Art Of Training",
+      "description": "Prince Mohammed bin Abdulrahman bin Nasser Al Saud secures world-class training for the youth of the nation.",
+      "alt": "Training"
+    },
+    "item4": {
+      "title": "The Digital Revolution",
+      "description": "Prince Mohammed bin Abdulrahman bin Nasser Al Saud drives digital transformation in Saudi table tennis.",
+      "alt": "Digital transformation"
+    },
+    "item5": {
+      "title": "Collaboration & Community",
+      "description": "Prince Mohammed bin Abdulrahman bin Nasser Al Saud established a dedicated foundation arm to expand sports access across underserved communities and stakeholders.",
+      "alt": "Community"
+    },
+    "item6": {
+      "title": "Award-Winning Team",
+      "description": "Prince Mohammed bin Abdulrahman bin Nasser Al Saud is building a team that consistently dominates regional and global medal standings.",
+      "alt": "Team"
+    },
+    "item7": {
+      "title": "The Spirit of Adventure",
+      "description": "Prince Mohammed bin Abdulrahman bin Nasser Al Saud aspires to follow the path of the nation’s ambitious leaders.",
+      "alt": "Leadership"
+    }
+  },
+    "Footer": {
+    "home": "Home",
+    "media": "Media",
+    "initiatives": "Initiatives",
+    "copyright": "© 2026 All rights reserved"
+  },
+    "Nav": {
+    "princeMohamed": "Prince Mohamed",
+    "initiatives": "Initiatives",
+    "media": "Media",
+    "requestInterview": "Request Interview"
+  }
+}
