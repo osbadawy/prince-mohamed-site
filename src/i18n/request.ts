@@ -11,12 +11,14 @@ export default getRequestConfig(async ({requestLocale}) => {
 
   const Home = (await import(`../../messages/${locale}/Home.json`)).default;
   const Initiatives = (await import(`../../messages/${locale}/Initiatives.json`)).default;
+  const Media = (await import(`../../messages/${locale}/Media.json`)).default;
 
   return {
     locale,
     messages: {
       Home,
-      Initiatives
+      Initiatives,
+      Media
     }
   };
 });

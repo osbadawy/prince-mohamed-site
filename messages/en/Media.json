@@ -1,0 +1,28 @@
+{
+  "MediaHero": {
+    "heading": "Media <br></br> Coverage & Highlights",
+    "cta": "Request now →"
+  },
+    "MediaGrid": {
+    "item1": {
+      "title": "Welcomed by the Chinese Table Tennis Federation",
+      "text": "Prince Mohammed bin Abdulrahman bin Nasser AlSaud was formally welcomed at a major tournament hosted in China, reinforcing the strong sporting ties between the Kingdom of Saudi Arabia and the People’s Republic of China. The visit reflected growing cooperation and mutual respect between two nations committed to advancing table tennis at the highest level."
+    },
+    "item2": {
+      "title": "Strategic Discussions Between Federation Presidents",
+      "text": "Constructive discussions were held between Prince Mohammed, President of the Saudi Table Tennis Federation, and the President of the Chinese Table Tennis Federation. The dialogue focused on technical collaboration, athlete development pathways, knowledge exchange, and strengthening bilateral partnerships to elevate competitive standards across both nations."
+    },
+    "item3": {
+      "title": "Saudi Arabia Secures Gold",
+      "text": "Under Prince Mohammed’s leadership, Saudi Arabia achieved a landmark gold medal victory at an international tournament, marking a significant milestone in the nation’s sporting progress. The achievement reflects enhanced preparation standards, athlete support systems, and a renewed competitive ambition within the Saudi table tennis program."
+    },
+    "item4": {
+      "title": "Strengthening STTF & ITTF Collaboration",
+      "text": "Continued collaboration between the Saudi Table Tennis Federation and the International Table Tennis Federation has reinforced Saudi Arabia’s presence within the global sporting community. Through governance alignment, event development, and strategic engagement, these efforts position the Kingdom as an increasingly influential voice in international table tennis."
+    }
+  },
+    "MediaRequest": {
+    "title": "Media & Interview Requests<br></br>Now Open",
+    "subtitle": "Prince Mohammed bin Abdulrahman bin Nasser AlSaud"
+  }
+}
