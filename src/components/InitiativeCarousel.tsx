@@ -1,9 +1,86 @@
 "use client";
 
-import React from "react";
-import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
+import {useTranslations} from "next-intl";
+import {Carousel, Card} from "@/components/ui/apple-cards-carousel";
 
 export function InitiativeCarousel() {
+  const t = useTranslations("Initiatives.InitiativeCarousel");
+
+  const data = [
+    {
+      category: t("item1.category"),
+      title: t("item1.title"),
+      src: "/images/initiatives/APP.png",
+      content: (
+        <InitiativeContent
+          title={t("item1.contentTitle")}
+          image="/images/initiatives/APP.png"
+          text={t("item1.contentText")}
+        />
+      ),
+    },
+    {
+      category: t("item2.category"),
+      title: t("item2.title"),
+      src: "/images/initiatives/init.jpg",
+      content: (
+        <InitiativeContent
+          title={t("item2.contentTitle")}
+          image="/images/initiatives/init.jpg"
+          text={t("item2.contentText")}
+        />
+      ),
+    },
+    {
+      category: t("item3.category"),
+      title: t("item3.title"),
+      src: "/images/initiatives/init3.jpg",
+      content: (
+        <InitiativeContent
+          title={t("item3.contentTitle")}
+          image="/images/initiatives/init3.jpg"
+          text={t("item3.contentText")}
+        />
+      ),
+    },
+    {
+      category: t("item4.category"),
+      title: t("item4.title"),
+      src: "/images/initiatives/init4.jpg",
+      content: (
+        <InitiativeContent
+          title={t("item4.contentTitle")}
+          image="/images/initiatives/init4.jpg"
+          text={t("item4.contentText")}
+        />
+      ),
+    },
+    {
+      category: t("item5.category"),
+      title: t("item5.title"),
+      src: "/images/initiatives/init5.jpg",
+      content: (
+        <InitiativeContent
+          title={t("item5.contentTitle")}
+          image="/images/initiatives/init5.jpg"
+          text={t("item5.contentText")}
+        />
+      ),
+    },
+    {
+      category: t("item6.category"),
+      title: t("item6.title"),
+      src: "/images/initiatives/init6.jpg",
+      content: (
+        <InitiativeContent
+          title={t("item6.contentTitle")}
+          image="/images/initiatives/init6.jpg"
+          text={t("item6.contentText")}
+        />
+      ),
+    },
+  ];
+
   const cards = data.map((card, index) => (
     <Card key={card.src} card={card} index={index} />
   ));
@@ -11,9 +88,12 @@ export function InitiativeCarousel() {
   return (
     <div className="w-full h-full py-20">
       <h2 className="max-w-7xl pl-4 mx-auto text-xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-200 font-sans">
-        Latest Initiatives and Projects
+        {t("heading")}
       </h2>
-      <Carousel items={cards} />
+
+      <div dir="ltr">
+        <Carousel items={cards} />
+      </div>
     </div>
   );
 }
@@ -44,78 +124,3 @@ const InitiativeContent = ({
     </div>
   );
 };
-
-const data = [
-  {
-    category: "Digital Infrastructure",
-    title: "An App That Learns & Grows With You",
-    src: "./images/initiatives/APP.png",
-    content: (
-      <InitiativeContent
-        title="Under Prince Mohammed’s leadership,"
-        image="./images/initiatives/APP.png"
-        text="the Saudi Table Tennis Federation introduced a digital ecosystem designed to modernize competition management, athlete tracking, and federation operations. The initiative enhanced transparency, data-driven decision making, and real-time engagement with clubs and players. By prioritizing digital transformation, the Federation has strengthened performance analytics, streamlined tournament organization, and positioned itself among the region’s most technologically progressive sporting bodies."
-      />
-    ),
-  },
-  {
-    category: "Rising Talents",
-    title: "Proving What Is Possible",
-    src: "./images/initiatives/init.jpg",
-    content: (
-      <InitiativeContent
-        title="Through structured talent pathways,"
-        image="./images/initiatives/init.jpg"
-        text="Prince Mohammed has expanded grassroots programs and high-performance development initiatives, enabling young Saudi athletes to compete confidently at regional and international levels. Enhanced training standards, exposure to international tournaments, and mentorship frameworks have resulted in measurable competitive growth and record-breaking performances—demonstrating what is possible when opportunity meets preparation."
-      />
-    ),
-  },
-  {
-    category: "Onboarding The Best",
-    title: "Securing The Future Of The Best Talent",
-    src: "./images/initiatives/init3.jpg",
-    content: (
-      <InitiativeContent
-        title="Recognizing that excellence begins with people,"
-        image="./images/initiatives/init3.jpg"
-        text="the Federation has strategically onboarded elite coaches, technical advisors, and performance specialists. These appointments have strengthened athlete preparation, improved coaching methodologies, and elevated the overall competitive framework. By investing in world-class expertise, Prince Mohammed has ensured long-term sustainability and international alignment in technical standards."
-      />
-    ),
-  },
-  {
-    category: "New Partnerships",
-    title: "Forging New Partnerships To Drive Innovation",
-    src: "./images/initiatives/init4.jpg",
-    content: (
-      <InitiativeContent
-        title="Expanding beyond traditional sponsorship models,"
-        image="./images/initiatives/init4.jpg"
-        text="Prince Mohammed secured strategic commercial partnerships and international collaborations that significantly increased the Federation’s visibility and financial stability. These alliances introduced new platforms for innovation, athlete development support, and event enhancement—marking a new era of international cooperation never before seen within Saudi table tennis."
-      />
-    ),
-  },
-  {
-    category: "Event Highlights",
-    title: "The Grand Opening For a New Era",
-    src: "./images/initiatives/init5.jpg",
-    content: (
-      <InitiativeContent
-        title="Under his presidency,"
-        image="./images/initiatives/init5.jpg"
-        text="the Federation elevated event presentation standards, modernized tournament production, and expanded spectator engagement. Flagship competitions such as the Jahez Premier Division showcased a refined competitive product, strengthened media coverage, and attracted broader community participation—setting new benchmarks for sporting excellence within the Kingdom."
-      />
-    ),
-  },
-  {
-    category: "The Team",
-    title: "The Saudi Team Securing First Place",
-    src: "./images/initiatives/init6.jpg",
-    content: (
-      <InitiativeContent
-        title="The national team’s recent achievements"
-        image="./images/initiatives/init6.jpg"
-        text="reflect a comprehensive transformation strategy focused on performance, preparation, and belief. With improved athlete support systems, international exposure, and performance monitoring, Saudi players have reached new podium finishes and competitive milestones. These victories symbolize more than medals—they represent a renewed national ambition driven by visionary leadership."
-      />
-    ),
-  },
-];

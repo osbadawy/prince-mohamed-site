@@ -13,7 +13,7 @@ import {
 import { useTranslations } from "next-intl";
 
 export default function BentoGridSection() {
-  const t = useTranslations("Bento");
+  const t = useTranslations("Home.Bento");
 
   const items = [
     {

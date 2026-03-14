@@ -3,7 +3,7 @@ import {MaskContainer} from "@/components/ui/svg-mask-effect";
 import {useTranslations} from "next-intl";
 
 export default function MaskSection() {
-  const t = useTranslations("MaskSection");
+  const t = useTranslations("Home.MaskSection");
 
   return (
     <MaskContainer

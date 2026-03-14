@@ -17,7 +17,7 @@ import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
 
 export function Nav() {
-  const t = useTranslations("Nav");
+  const t = useTranslations("Home.Nav");
   const locale = useLocale();
 
   const navItems = [

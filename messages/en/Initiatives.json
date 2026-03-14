@@ -1,0 +1,50 @@
+{
+  "InitiativesHero": {
+    "titleStart": "Connecting Saudi Arabia to the",
+    "world": "World",
+    "subtitle": "Prince Mohamed bin Abdulrahman expands Saudi table tennis beyond borders, forging historic global partnerships."
+  },
+   "InitiativeCarousel": {
+    "heading": "Latest Initiatives and Projects",
+    "item1": {
+      "category": "Digital Infrastructure",
+      "title": "An App That Learns & Grows With You",
+      "contentTitle": "Under Prince Mohammed’s leadership,",
+      "contentText": "the Saudi Table Tennis Federation introduced a digital ecosystem designed to modernize competition management, athlete tracking, and federation operations. The initiative enhanced transparency, data-driven decision making, and real-time engagement with clubs and players. By prioritizing digital transformation, the Federation has strengthened performance analytics, streamlined tournament organization, and positioned itself among the region’s most technologically progressive sporting bodies."
+    },
+    "item2": {
+      "category": "Rising Talents",
+      "title": "Proving What Is Possible",
+      "contentTitle": "Through structured talent pathways,",
+      "contentText": "Prince Mohammed has expanded grassroots programs and high-performance development initiatives, enabling young Saudi athletes to compete confidently at regional and international levels. Enhanced training standards, exposure to international tournaments, and mentorship frameworks have resulted in measurable competitive growth and record-breaking performances—demonstrating what is possible when opportunity meets preparation."
+    },
+    "item3": {
+      "category": "Onboarding The Best",
+      "title": "Securing The Future Of The Best Talent",
+      "contentTitle": "Recognizing that excellence begins with people,",
+      "contentText": "the Federation has strategically onboarded elite coaches, technical advisors, and performance specialists. These appointments have strengthened athlete preparation, improved coaching methodologies, and elevated the overall competitive framework. By investing in world-class expertise, Prince Mohammed has ensured long-term sustainability and international alignment in technical standards."
+    },
+    "item4": {
+      "category": "New Partnerships",
+      "title": "Forging New Partnerships To Drive Innovation",
+      "contentTitle": "Expanding beyond traditional sponsorship models,",
+      "contentText": "Prince Mohammed secured strategic commercial partnerships and international collaborations that significantly increased the Federation’s visibility and financial stability. These alliances introduced new platforms for innovation, athlete development support, and event enhancement—marking a new era of international cooperation never before seen within Saudi table tennis."
+    },
+    "item5": {
+      "category": "Event Highlights",
+      "title": "The Grand Opening For a New Era",
+      "contentTitle": "Under his presidency,",
+      "contentText": "the Federation elevated event presentation standards, modernized tournament production, and expanded spectator engagement. Flagship competitions such as the Jahez Premier Division showcased a refined competitive product, strengthened media coverage, and attracted broader community participation—setting new benchmarks for sporting excellence within the Kingdom."
+    },
+    "item6": {
+      "category": "The Team",
+      "title": "The Saudi Team Securing First Place",
+      "contentTitle": "The national team’s recent achievements",
+      "contentText": "reflect a comprehensive transformation strategy focused on performance, preparation, and belief. With improved athlete support systems, international exposure, and performance monitoring, Saudi players have reached new podium finishes and competitive milestones. These victories symbolize more than medals—they represent a renewed national ambition driven by visionary leadership."
+    }
+  },
+    "Cta": {
+      "requestInterview": "Request Interview"
+    }
+
+}

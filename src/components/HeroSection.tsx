@@ -5,7 +5,7 @@ import { AuroraBackground } from "./ui/aurora-background";
 import {useTranslations} from 'next-intl';
 
 export default function HeroSection() {
-  const t = useTranslations('Home')
+  const t = useTranslations('Home.Home')
 
   return (
     <AuroraBackground className="relative overflow-hidden min-h-screen">

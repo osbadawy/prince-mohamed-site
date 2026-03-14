@@ -104,7 +104,7 @@ export const HeroParallax = ({
 };
 
 export const Header = () => {
-  const t = useTranslations("Home");
+  const t = useTranslations("Home.Home");
 
   return (
     <div className="max-w-4xl relative mx-auto py-20 md:py-20 px-4 w-full left-0 top-40">
@@ -129,7 +129,7 @@ export const ProductCard = ({
   };
   translate: MotionValue<number>;
 }) => {
-  const t = useTranslations("products");
+  const t = useTranslations("Home.products");
   const translatedTitle = t(product.title);
 
   return (

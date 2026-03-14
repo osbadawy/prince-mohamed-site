@@ -6,9 +6,9 @@ import Link from "next/link";
 
 export function MediaHero() {
   const images = [
-    "./images/media/media1.jpg",
-    "./images/media/media2.jpg",
-    "./images/media/media3.jpg",
+    "/images/media/media1.jpg",
+    "/images/media/media2.jpg",
+    "/images/media/media3.jpg",
   ];
   return (
     <ImagesSlider className="h-[40rem]" images={images}>

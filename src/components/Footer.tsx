@@ -13,7 +13,7 @@ import {
 } from "@tabler/icons-react";
 
 export default function Footer() {
-  const t = useTranslations("Footer");
+  const t = useTranslations("Home.Footer");
   const locale = useLocale();
 
   return (

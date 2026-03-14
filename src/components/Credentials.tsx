@@ -19,7 +19,7 @@ export function Credentials() {
   const [active, setActive] = useState<Card | null>(null);
   const ref = useRef<HTMLDivElement>(null);
   const uid = useId();
-  const t = useTranslations("Credentials");
+  const t = useTranslations("Home.Credentials");
 
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
