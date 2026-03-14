@@ -12,13 +12,17 @@ export default getRequestConfig(async ({requestLocale}) => {
   const Home = (await import(`../../messages/${locale}/Home.json`)).default;
   const Initiatives = (await import(`../../messages/${locale}/Initiatives.json`)).default;
   const Media = (await import(`../../messages/${locale}/Media.json`)).default;
+  const PrinceMohamed = (await import(`../../messages/${locale}/PrinceMohamed.json`)).default;
+  const Interview = (await import(`../../messages/${locale}/Interview.json`)).default;
 
   return {
     locale,
     messages: {
       Home,
       Initiatives,
-      Media
+      Media,
+      PrinceMohamed,
+      Interview
     }
   };
 });

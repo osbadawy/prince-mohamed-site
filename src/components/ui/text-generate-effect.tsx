@@ -2,6 +2,7 @@
 import { useEffect } from "react";
 import { motion, stagger, useAnimate } from "motion/react";
 import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 
 export const TextGenerateEffect = ({
   words,
@@ -15,6 +16,7 @@ export const TextGenerateEffect = ({
   duration?: number;
 }) => {
   const [scope, animate] = useAnimate();
+  const t = useTranslations("PrinceMohamed.PrinceHero");
   let wordsArray = words.split(" ");
   useEffect(() => {
     animate(
@@ -56,7 +58,7 @@ export const TextGenerateEffect = ({
         <div className=" dark:text-white text-black text-sm md:text-xl leading-snug tracking-wide">
           {renderWords()}
         </div>
-        <p><br/>- Prince Mohamed bin Abdulrahman bin Nasser Al Saud</p>
+        <p><br/>{t("name")}</p>
       </div>
     </div>
   );

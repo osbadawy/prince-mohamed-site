@@ -1,0 +1,12 @@
+{
+  "InterviewRequestForm": {
+    "title": "طلب مقابلة",
+    "emailLabel": "البريد الإلكتروني",
+    "emailPlaceholder": "your@email.com",
+    "organisationLabel": "اسم المؤسسة",
+    "organisationPlaceholder": "اسم مؤسستك",
+    "messageLabel": "تفاصيل طلب المقابلة",
+    "messagePlaceholder": "يرجى توضيح الهدف من المقابلة والجدول الزمني والشكل المفضل لها.",
+    "submit": "إرسال الطلب"
+  }
+}
