@@ -1,0 +1,12 @@
+{
+  "InterviewRequestForm": {
+    "title": "Request an Interview",
+    "emailLabel": "Email",
+    "emailPlaceholder": "your@email.com",
+    "organisationLabel": "Organisation Name",
+    "organisationPlaceholder": "Your organisation",
+    "messageLabel": "Interview Request Details",
+    "messagePlaceholder": "Please describe the purpose, timeline, and preferred format of the interview.",
+    "submit": "Submit Request"
+  }
+}

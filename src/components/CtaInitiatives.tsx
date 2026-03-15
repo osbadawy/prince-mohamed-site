@@ -1,24 +1,29 @@
 "use client";
-import { HoverBorderGradient } from "./ui/hover-border-gradient";
 
+import { HoverBorderGradient } from "./ui/hover-border-gradient";
 import Link from "next/link";
+import { useTranslations, useLocale } from "next-intl";
 
 export function CtaInitiatives() {
+  const t = useTranslations("Initiatives.Cta");
+  const locale = useLocale();
+
   return (
     <div className="m-40 flex justify-center text-center">
-      <Link href="/Interview">
+      <Link href={`/${locale}/Interview`}>
         <HoverBorderGradient
           containerClassName="rounded-full"
           as="div"
           className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2 cursor-pointer"
         >
           <AceternityLogo />
-          <span>Request Interview</span>
+          <span>{t("requestInterview")}</span>
         </HoverBorderGradient>
       </Link>
     </div>
   );
 }
+
 
 const AceternityLogo = () => {
   return (

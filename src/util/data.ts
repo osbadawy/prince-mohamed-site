@@ -1,93 +1,93 @@
 export const products = [
   {
-    title: "A BRIGHT FUTURE",
+    title: "hero1",
     link: "https://sttf.sa/news",
     thumbnail:
       "./images/heroSection/hero1.jpg",
   },
   {
-    title: "INTERNATIONAL COLLABORATIONS",
+    title: "hero2",
     link: "https://sttf.sa/news",
     thumbnail:
       "./images/heroSection/hero2.jpg",
   },
   {
-    title: "LEADERSHIP IN SPORTS",
+    title: "hero3",
     link: "https://sttf.sa/news",
     thumbnail:
       "./images/heroSection/hero3.jpg",
   },
  
   {
-    title: "Prince Mohammed bin Abdulrahman bin Nasser Al Saud",
+    title: "hero4",
     link: "https://sttf.sa/news",
     thumbnail:
       "./images/heroSection/hero4.jpg",
   },
   {
-    title: "OUR TRANSFORMATIVE POWER",
+    title: "hero5",
     link: "https://sttf.sa/news",
     thumbnail:
       "./images/heroSection/hero5.jpg",
   },
   {
-    title: "THE TEAM",
+    title: "hero6",
     link: "https://sttf.sa/news",
     thumbnail:
       "./images/heroSection/hero6.jpg",
   },
  
   {
-    title: "TECHNOLOGY AND INNOVATION",
+    title: "hero7",
     link: "https://sttf.sa/news",
     thumbnail:
       "./images/heroSection/hero7.jpg",
   },
   {
-    title: "A WINNING MINDSET",
+    title: "hero8",
     link: "https://sttf.sa/news",
     thumbnail:
       "./images/heroSection/hero8.jpg",
   },
   {
-    title: "YOUTH EMPOWERMENT",
+    title: "hero9",
     link: "https://sttf.sa/news",
     thumbnail:
       "./images/heroSection/hero9.jpg",
   },
   {
-    title: "INSPIRING THE WORLD",
+    title: "hero10",
     link: "https://sttf.sa/news",
     thumbnail:
       "./images/heroSection/hero10.jpg",
   },
   {
-    title: "PARTNERSHIPS AND COLLABORATIONS",
+    title: "hero11",
     link: "https://sttf.sa/news",
     thumbnail:
       "./images/heroSection/hero11.png",
   },
  
   {
-    title: "A SUPPORTIVE COMMUNITY",
+    title: "hero12",
     link: "https://sttf.sa/news",
     thumbnail:
       "./images/heroSection/hero12.jpg",
   },
   {
-    title: "Worldwide Recognition",
+    title: "hero13",
     link: "https://sttf.sa/news",
     thumbnail:
       "./images/heroSection/hero13.jpg",
   },
   {
-    title: "NURTURING TALENT",
+    title: "hero14",
     link: "https://sttf.sa/news",
     thumbnail:
       "./images/heroSection/hero14.jpg",
   },
   {
-    title: "International Partnerships",
+    title: "hero15",
     link: "https://sttf.sa/news",
     thumbnail:
       "./images/heroSection/hero15.jpg",

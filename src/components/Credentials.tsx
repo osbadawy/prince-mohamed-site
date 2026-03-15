@@ -2,6 +2,7 @@
 
 import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
+import { useTranslations } from "next-intl";
 import { useOutsideClick } from "@/hooks/use-outside-click";
 
 type Card = {
@@ -11,13 +12,14 @@ type Card = {
   src: string;
   ctaText: string;
   ctaLink: string;
-  content: React.ReactNode | (() => React.ReactNode);
+  content: React.ReactNode | ((t: ReturnType<typeof useTranslations>) => React.ReactNode);
 };
 
 export function Credentials() {
   const [active, setActive] = useState<Card | null>(null);
   const ref = useRef<HTMLDivElement>(null);
   const uid = useId();
+  const t = useTranslations("Home.Credentials");
 
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
@@ -32,11 +34,26 @@ export function Credentials() {
 
   useOutsideClick(ref, () => setActive(null));
 
+  const localizedCards: Card[] = cards.map((card) => ({
+    ...card,
+    title: t(`${card.id}.title`),
+    description: t(`${card.id}.description`),
+    ctaText: t(`${card.id}.ctaText`),
+  }));
+
+  const localizedActive = active
+    ? {
+        ...active,
+        title: t(`${active.id}.title`),
+        description: t(`${active.id}.description`),
+        ctaText: t(`${active.id}.ctaText`),
+      }
+    : null;
+
   return (
     <>
-      {/* Backdrop */}
       <AnimatePresence>
-        {active && (
+        {localizedActive && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -46,12 +63,11 @@ export function Credentials() {
         )}
       </AnimatePresence>
 
-      {/* Modal */}
       <AnimatePresence>
-        {active ? (
+        {localizedActive ? (
           <div className="fixed inset-0 grid place-items-center z-[100]">
             <motion.button
-              key={`close-${active.id}-${uid}`}
+              key={`close-${localizedActive.id}-${uid}`}
               layout
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -63,16 +79,16 @@ export function Credentials() {
             </motion.button>
 
             <motion.div
-              layoutId={`card-${active.id}-${uid}`}
+              layoutId={`card-${localizedActive.id}-${uid}`}
               ref={ref}
               className="w-full max-w-[500px] h-full md:h-fit md:max-h-[90%] flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
             >
-              <motion.div layoutId={`image-${active.id}-${uid}`}>
+              <motion.div layoutId={`image-${localizedActive.id}-${uid}`}>
                 <img
                   width={200}
                   height={200}
-                  src={active.src}
-                  alt={active.title}
+                  src={localizedActive.src}
+                  alt={localizedActive.title}
                   className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-fit object-top"
                 />
               </motion.div>
@@ -81,28 +97,28 @@ export function Credentials() {
                 <div className="flex justify-between items-start p-4">
                   <div>
                     <motion.h3
-                      layoutId={`title-${active.id}-${uid}`}
+                      layoutId={`title-${localizedActive.id}-${uid}`}
                       className="font-bold text-neutral-700 dark:text-neutral-200"
                     >
-                      {active.title}
+                      {localizedActive.title}
                     </motion.h3>
 
                     <motion.p
-                      layoutId={`description-${active.id}-${uid}`}
+                      layoutId={`description-${localizedActive.id}-${uid}`}
                       className="text-neutral-600 dark:text-neutral-400"
                     >
-                      {active.description}
+                      {localizedActive.description}
                     </motion.p>
                   </div>
 
                   <motion.a
-                    layoutId={`button-${active.id}-${uid}`}
-                    href={active.ctaLink}
+                    layoutId={`button-${localizedActive.id}-${uid}`}
+                    href={localizedActive.ctaLink}
                     target="_blank"
                     className="px-4 py-3 text-sm rounded-full font-bold bg-green-500 text-white"
                     rel="noreferrer"
                   >
-                    {active.ctaText}
+                    {localizedActive.ctaText}
                   </motion.a>
                 </div>
 
@@ -114,9 +130,9 @@ export function Credentials() {
                     exit={{ opacity: 0 }}
                     className="text-neutral-600 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
                   >
-                    {typeof active.content === "function"
-                      ? active.content()
-                      : active.content}
+                    {typeof localizedActive.content === "function"
+                      ? localizedActive.content(t)
+                      : localizedActive.content}
                   </motion.div>
                 </div>
               </div>
@@ -125,9 +141,8 @@ export function Credentials() {
         ) : null}
       </AnimatePresence>
 
-      {/* Cards list */}
       <ul className="max-w-2xl mx-auto w-full gap-4">
-        {cards.map((card) => (
+        {localizedCards.map((card) => (
           <motion.div
             layoutId={`card-${card.id}-${uid}`}
             key={`card-${card.id}-${uid}`}
@@ -202,64 +217,40 @@ export const CloseIcon = () => {
 const cards: Card[] = [
   {
     id: "sttf-president",
-    description: "The Saudi Table Tennis Federation",
-    title: "President of",
+    description: "",
+    title: "",
     src: "./images/credentials/STTF.jpg",
-    ctaText: "Read More",
+    ctaText: "",
     ctaLink: "https://sttf.sa/about",
-    content: () => (
-      <p>
-        Prince Mohammed Bin Abdulrahman Bin Nasser Al Saud is the President 
-        of the Saudi Table Tennis Federation, leading a ground-up transformation of the sport 
-        through innovation, world-class coaching, and high-performance development programs that are raising 
-        athlete standards and global competitiveness.<br/><br/>
-      </p>
-    ),
+    content: (t) => <p>{t.rich("sttf-president.content", { br: () => <><br /><br /></> })}</p>,
   },
   {
     id: "wattf-president",
-    description: "The West Asian Table Tennis Federation",
-    title: "President of",
+    description: "",
+    title: "",
     src: "./images/credentials/ATTU.png",
-    ctaText: "Read More",
-    ctaLink: "https://www.saudiarabiabreakingnews.com/post/west-asia-table-tennis-federation-elects-prince-mohammed-bin-abdulrahman-as-president",
-    content: () => (
-      <p>
-        Prince Mohammed Bin Abdulrahman Bin Nasser Al Saud also leads the 
-        West Asian Table Tennis Federation, advancing regional collaboration and modern development 
-        programs while strengthening competitive pathways and raising performance standards across West Asia.<br/><br/>
-      </p>
-    ),
+    ctaText: "",
+    ctaLink:
+      "https://www.saudiarabiabreakingnews.com/post/west-asia-table-tennis-federation-elects-prince-mohammed-bin-abdulrahman-as-president",
+    content: (t) => <p>{t.rich("wattf-president.content", { br: () => <><br /><br /></> })}</p>,
   },
   {
     id: "ittf-advisory",
-    description: "The ITTF Advisory Council",
-    title: "President of",
+    description: "",
+    title: "",
     src: "./images/credentials/ITTF.png",
-    ctaText: "Read More",
-    ctaLink: "https://www.ittf.com/2025/07/21/ittf-president-creates-advisory-commission-led-by-prince-mohammed-bin-abdulrahman-al-saud/",
-    content: () => (
-      <p>
-        Prince Mohammed Bin Abdulrahman Bin Nasser Al Saud serves as 
-        President of the International Advisory Council, guiding strategic direction and 
-        cross-border cooperation initiatives that support modernization, governance excellence, 
-        and long-term growth of table tennis at the international level.<br/><br/>
-      </p>
-    ),
+    ctaText: "",
+    ctaLink:
+      "https://www.ittf.com/2025/07/21/ittf-president-creates-advisory-commission-led-by-prince-mohammed-bin-abdulrahman-al-saud/",
+    content: (t) => <p>{t.rich("ittf-advisory.content", { br: () => <><br /><br /></> })}</p>,
   },
   {
     id: "attu-member",
-    description: "The ATTU Council",
-    title: "Member of",
+    description: "",
+    title: "",
     src: "./images/credentials/ATTU.png",
-    ctaText: "Read More",
+    ctaText: "",
     ctaLink: "https://directory.ittf.com/#/home?selected_continent=latin%20america",
-    content: () => (
-      <p>
-        Prince Mohammed Bin Abdulrahman Bin Nasser Al Saud serves as a Council 
-        Member of ATTU, contributing to regional strategy, governance, and development 
-        initiatives that strengthen competition structures and advance table tennis across Asia.<br/><br/>
-      </p>
-    ),
+    content: (t) => <p>{t.rich("attu-member.content", { br: () => <><br /><br /></> })}</p>,
   },
 ];

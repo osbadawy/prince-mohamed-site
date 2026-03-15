@@ -1,4 +1,5 @@
 "use client";
+
 import {
   Navbar,
   NavBody,
@@ -10,22 +11,27 @@ import {
   MobileNavToggle,
   MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
+
 import { useState } from "react";
 import Link from "next/link";
+import { useLocale, useTranslations } from "next-intl";
 
 export function Nav() {
+  const t = useTranslations("Home.Nav");
+  const locale = useLocale();
+
   const navItems = [
     {
-      name: "Prince Mohamed",
-      link: "/Mohamed",
+      name: t("princeMohamed"),
+      link: `/${locale}/Mohamed`,
     },
     {
-      name: "Initiatives",
-      link: "/Initiatives",
+      name: t("initiatives"),
+      link: `/${locale}/Initiatives`,
     },
     {
-      name: "Media",
-      link: "/media",
+      name: t("media"),
+      link: `/${locale}/media`,
     },
   ];
 
@@ -34,26 +40,31 @@ export function Nav() {
   return (
     <div className="fixed top-0 left-0 w-full z-50 pt-5">
       <Navbar>
+
         {/* Desktop Navigation */}
         <NavBody>
           <NavbarLogo />
+
           <NavItems items={navItems} />
+
           <div className="flex items-center gap-4">
-              <NavbarButton
-                as={Link}
-                href="/Interview"
-                variant="primary"
-                className="w-full"
-              >
-                Request Interview
-              </NavbarButton>
+            <NavbarButton
+              as={Link}
+              href={`/${locale}/Interview`}
+              variant="primary"
+              className="w-full"
+            >
+              {t("requestInterview")}
+            </NavbarButton>
           </div>
         </NavBody>
 
         {/* Mobile Navigation */}
         <MobileNav>
+
           <MobileNavHeader>
             <NavbarLogo />
+
             <MobileNavToggle
               isOpen={isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -64,6 +75,7 @@ export function Nav() {
             isOpen={isMobileMenuOpen}
             onClose={() => setIsMobileMenuOpen(false)}
           >
+
             {navItems.map((item, idx) => (
               <a
                 key={`mobile-link-${idx}`}
@@ -74,20 +86,25 @@ export function Nav() {
                 <span className="block">{item.name}</span>
               </a>
             ))}
+
             <div className="flex w-full flex-col gap-4">
               <NavbarButton
                 as={Link}
-                href="/Interview"
+                href={`/${locale}/Interview`}
                 onClick={() => setIsMobileMenuOpen(false)}
                 variant="primary"
                 className="w-full"
               >
-                Request Interview
+                {t("requestInterview")}
               </NavbarButton>
             </div>
+
           </MobileNavMenu>
+
         </MobileNav>
+
       </Navbar>
     </div>
   );
 }
+
